@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+
 namespace SharpFFTW.Single
 {
     using System;
@@ -19,6 +20,11 @@ namespace SharpFFTW.Single
         /// Gets the imaginary part of the complex number.
         /// </summary>
         public readonly float Imaginary;
+
+        /// <summary>
+        /// Returns the length of the complex number.
+        /// </summary>
+        public readonly float Length => MathF.Sqrt(Real * Real + Imaginary * Imaginary);
 
         /// <summary>
         /// Creates a new Complex32 value.
